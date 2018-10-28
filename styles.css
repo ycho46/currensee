@@ -1,16 +1,16 @@
-.gold, .gold small {
-  background-color: gold;
+.usd, .usd small {
+  background-color: indianred;
+  color: white;
+}
+
+.krw, .krw small {
+  background-color: ghostwhite;
   color: #403600;
 }
 
-.silver, .silver small {
-  background-color: silver;
-  color: #404040;
-}
-
-.oil, .oil small {
-  background-color: black;
-  color: #E5E5E5;
+.eur, .eur small {
+  background-color: slategrey;
+  color: ghostwhite;
 }
 
 html, body, .container-fluid {
