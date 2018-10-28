@@ -7,9 +7,13 @@ html, body, .container-fluid {
   height: 100%;
 }
 
-.col {
+.eur, .yen, .gbp, .cny {
     background-color: whitesmoke;
     color: #403600;
+}
+
+.col-xs-7 {
+    text-align: right;
 }
 
 .row {
@@ -49,7 +53,8 @@ html, body, .container-fluid {
 
 
 input{
-     color: #403600;
+    color: #403600;
+    text-align: right;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
