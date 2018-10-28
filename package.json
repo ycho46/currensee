@@ -1,8 +1,8 @@
 {
-  "name": "Prices",
+  "name": "Currensee",
   "version": "1.0.0",
-  "description": "Prices of commodities",
-  "repository": "electron/simple-samples",
+  "description": "Currency around the world",
+  "repository": "currensee",
   "main": "app.js",
   "scripts": {
     "start": "electron app.js"
