@@ -1,24 +1,20 @@
-.usd, .usd small {
-  background-color: indianred;
+.usd {
+  background-color: #427AA1;
   color: white;
-}
-
-.krw, .krw small {
-  background-color: ghostwhite;
-  color: #403600;
-}
-
-.eur, .eur small {
-  background-color: slategrey;
-  color: ghostwhite;
 }
 
 html, body, .container-fluid {
   height: 100%;
 }
 
+.col {
+    background-color: whitesmoke;
+    color: #403600;
+}
+
 .row {
-  height: 33.33333333%;
+  height: 20%;
+  border-bottom: 1px solid lightgrey;
 }
 
 .row > div {
@@ -49,4 +45,15 @@ html, body, .container-fluid {
 /* Hide the price and change when they are empty */
 .change:empty, .price:empty {
   display: none;
+}
+
+
+input{
+     color: #403600;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
