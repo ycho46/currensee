@@ -47,6 +47,4 @@ $(() => {
     //when input is changed we update the currency values;
     $('#number-input').on('input', function (){ getCurrency(this.value)}
     );
-     // focus input box on start    
-    $('#number-input').focus();
 });
