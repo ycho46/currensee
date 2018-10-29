@@ -34,6 +34,15 @@ $(() => {
     })
 });
 
-printOption(option) => {
-    app.console.log(option);
-}
+//printOption(option) => {
+//    app.console.log(option);
+//}
+
+//$("document").ready(function() {
+//
+//  $('.dropdown-menu').on('click', function(e) {
+//      if($(this).hasClass('dropdown-menu-form')) {
+//          e.stopPropagation();
+//      }
+//  });
+//});
