@@ -13,7 +13,17 @@ url = `https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml`
 
 //map to contain all rates.
 let map = new Object(); // or var map = {};
-
+function getCurrency (n){
+    const num = n;
+    const usd = Number(map['USD'] * num).toFixed(2);
+    $('#usd').text(usd);
+    const jpy = Number(map['JPY'] * num).toFixed(2);
+    $('#jpy').text(jpy);   
+    const gbp = Number(map['GBP'] * num).toFixed(2);
+    $('#gbp').text(gbp);
+    const cny = Number(map['CNY'] * num).toFixed(2);
+    $('#cny').text(cny);
+};
 $(() => {
     rp(url)
     .then(function(xml) {
@@ -28,21 +38,15 @@ $(() => {
 //                app.console.log(k + " " + map[k]);
 //            }
         });
+        //loads the default values;
+        getCurrency(1);
     })
     .catch(function(err) {
       //handle error
     })
-    
-    $('#number-input').bind('input propertychange', function() {
-        const num = this.value;
-        const usd = Number(map['USD'] * num).toFixed(2);
-        $('#usd').text(usd);
-        const jpy = Number(map['JPY'] * num).toFixed(2);
-        $('#jpy').text(jpy);   
-        const gbp = Number(map['GBP'] * num).toFixed(2);
-        $('#gbp').text(gbp);
-        const cny = Number(map['CNY'] * num).toFixed(2);
-        $('#cny').text(cny);
-    })
-    $('#text-input').focus() // focus input box
+    //when input is changed we update the currency values;
+    $('#number-input').on('input', function (){ getCurrency(this.value)}
+    );
+     // focus input box on start    
+    $('#number-input').focus();
 });
