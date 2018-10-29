@@ -1,10 +1,10 @@
-.eur {
-  background-color: #427AA1;
-  color: white;
-}
-
 html, body, .container-fluid {
   height: 100%;
+}
+
+.eur {
+  background-color: #4C7BBE;
+  color: white;
 }
 
 .usd, .jpy, .gbp, .cny {
@@ -27,6 +27,7 @@ html, body, .container-fluid {
   transform: translateY(-50%);
 }
 
+
 .price {
   padding-right: 5px;
 }
@@ -42,23 +43,43 @@ html, body, .container-fluid {
 }
 
 /* Add a $ before the price */
+/*
 .price::before {
   content: '$';
 }
+*/
 
 /* Hide the price and change when they are empty */
+/*
 .change:empty, .price:empty {
   display: none;
 }
+*/
 
 
 input{
-    color: #403600;
-    text-align: right;
+    color: #666;
+    text-align: center;
+    border: 0;
+    border-radius: 4px;
+    padding: 5px;
+    margin-right: 7px;
+    opacity: 0.6;
+}
+input:focus {
+    outline: 0;
+    opacity: 1;
+    
 }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+span {
+    margin-right: 7px;
+    font-size: 1.5em;
+    color: #4C7BBE;
 }
