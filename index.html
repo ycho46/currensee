@@ -21,60 +21,50 @@
 <body>
   <div id="container" class="container-fluid">
 
-    <!-- USD Row -->
-    <div class="row select">
-      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-      <select id="selectCurrency" onchange="printOption(this.value);">
-      <option value="usd">US Dollar (USD)</option>
-      <option value="eur">Euro (EUR)</option>
-      <option value="yen">Japanese Yen (YEN)</option>
-      <option value="gbp">British Pound (GBP)</option>
-      <option value="cny">Chinese Yuan Renminbi (CNY)</option>
-</select>
-          
-        </div>
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><input type="number" name="usd" min="0" value="1"> <strong>USD</strong>
-      </div>
-    </div>
-      
     <!-- EUR Row -->
     <div class="row eur">
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-          <label><h4>Euro</h4></label>
-        </div>
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><output id="eur" class="eur"></output> <strong>EUR</strong>
+        <label><h4>Euro</h4></label>
+      </div>
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><input type="number" id="number-input" name="eur" min="0" value="1"></input> <strong>EUR</strong>
       </div>
     </div>
 
-    <!-- YEN Row -->
-    <div class="row yen">
+    <!-- USD Row -->
+    <div class="row usd">
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-          <label><h4>Japanese Yen</h4></label>
-        </div>
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><output id="yen" class="yen"></output> <strong>YEN</strong>
+        <label><h4>US Dollar</h4></label>
+      </div>
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><output id="usd"></output> <strong>USD</strong>
       </div>
     </div>
-      
+
+    <!-- JPY Row -->
+    <div class="row jpy">
+      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+        <label><h4>Japanese Yen</h4></label>
+      </div>
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><output id="jpy"></output> <strong>YEN</strong>
+      </div>
+    </div>
+
     <!-- GBP Row -->
     <div class="row gbp">
-       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-          <label><h4>British Pound</h4></label>
-        </div>
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><output id="gbp" class="gbp"></output> <strong>GBP</strong>
+      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+        <label><h4>British Pound</h4></label>
+      </div>
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><output id="gbp"></output> <strong>GBP</strong>
       </div>
     </div>
-      
+
     <!-- CNY Row -->
     <div class="row cny">
-       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-          <label><h4>Chinese Yuan Renminbi</h4></label>
-        </div>
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><output id="cny" class="cny"></output> <strong>CNY</strong>
+      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+        <label><h4>Chinese Yuan Renminbi</h4></label>
       </div>
-    </div>      
-      <footer>
-  
-      </footer>
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><output id="cny"></output> <strong>CNY</strong>
+      </div>
+    </div>
 
   </div>
 </body>
