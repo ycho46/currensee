@@ -24,13 +24,14 @@
     <!-- USD Row -->
     <div class="row select">
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-      <select id="selectCurrency">
+      <select id="selectCurrency" onchange="printOption(this.value);">
       <option value="usd">US Dollar (USD)</option>
       <option value="eur">Euro (EUR)</option>
       <option value="yen">Japanese Yen (YEN)</option>
       <option value="gbp">British Pound (GBP)</option>
       <option value="cny">Chinese Yuan Renminbi (CNY)</option>
 </select>
+          
         </div>
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><input type="number" name="usd" min="0" value="1"> <strong>USD</strong>
       </div>
