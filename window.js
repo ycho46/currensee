@@ -23,10 +23,10 @@ $(() => {
             for(curr in result['gesmes:Envelope'].Cube[0].Cube[0].Cube) {
                 map[result['gesmes:Envelope'].Cube[0].Cube[0].Cube[curr].$.currency] = result['gesmes:Envelope'].Cube[0].Cube[0].Cube[curr].$.rate;
             }
-            //prints all contents of map
-//            for(k in map) {
-//                app.console.log(k + " " + map[k]);
-//            }
+//            prints all contents of map
+            for(k in map) {
+                app.console.log(k + " " + map[k]);
+            }
         });
     })
     .catch(function(err) {

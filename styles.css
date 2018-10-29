@@ -1,6 +1,6 @@
 .usd {
   background-color: #427AA1;
-  color: white;
+/*  color: white;*/
 }
 
 html, body, .container-fluid {
@@ -16,8 +16,16 @@ html, body, .container-fluid {
     text-align: right;
 }
 
+/*
+#container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: minmax(100px, 1fr) 200px;
+}
+*/
+
 .row {
-  height: 20%;
+  height: 19.2%;
   border-bottom: 1px solid lightgrey;
 }
 
@@ -42,9 +50,11 @@ html, body, .container-fluid {
 }
 
 /* Add a $ before the price */
+/*
 .price::before {
   content: '$';
 }
+*/
 
 /* Hide the price and change when they are empty */
 .change:empty, .price:empty {
@@ -61,4 +71,9 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+footer {
+    position: fixed;
+    justify-content: end;
 }
