@@ -33,3 +33,7 @@ $(() => {
       //handle error
     })
 });
+
+printOption(option) => {
+    app.console.log(option);
+}
