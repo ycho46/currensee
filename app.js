@@ -1,9 +1,12 @@
 const {app, BrowserWindow} = require('electron') // http://electronjs.org/docs/api
 const path = require('path') // https://nodejs.org/api/path.html
 const url = require('url') // https://nodejs.org/api/url.html
+const console = require('console')
 
 let window = null
 
+app.console = new console.Console(process.stdout, process.stderr)
+console.log('main')
 // Wait until the app is ready
 app.once('ready', () => {
   // Create a new window

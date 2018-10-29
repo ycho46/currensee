@@ -1,35 +1,35 @@
 /* global $ */
-const csv = require('papaparse')
+const rp = require('request-promise')
+const parseString = require('xml2js').parseString; //https://www.npmjs.com/package/xml2js
+const remote = require('electron').remote;
+const app = remote.app;
+// 
+//log.info('running window')
 
 // Run this function after the page has loaded
+
+//URL to scrap currency value rates against EUR
+url = `https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml`
+
+//map to contain all rates.
+let map = new Object(); // or var map = {};
+
 $(() => {
-  let url
-  const stocks = {
-    'oil': 'CL.F', // Crude oil, https://stooq.com/q/?s=cl.f
-    'gold': 'GC.F', // Gold, https://stooq.com/q/?s=gc.f
-    'silver': 'SI.F' // Silver,https://stooq.com/q/?s=si.f
-  }
+    rp(url)
+    .then(function(xml) {
+        parseString(xml, function (err, result) {
 
-  for (let symbol in stocks) {
-    url = `https://stooq.com/q/l/?s=${stocks[symbol]}&f=sd2t2ohlc&h&e=csv`
-
-    csv.parse(url, {
-      download: true,
-      delimiter: ',',
-      complete: (results) => {
-        // price data is the second array, first is headers
-        const prices = results.data[1]
-        const previousPrice = parseFloat(prices[3], 10)
-        const currentPrice = parseFloat(prices[6], 10)
-        let change = Math.round((currentPrice - previousPrice) * 100) / 100
-
-        if (change >= 0) {
-          change = `+${change}`
-        }
-
-        $(`#${symbol}-price`).text(currentPrice.toLocaleString())
-        $(`#${symbol}-change`).text(change)
-      }
+            
+            for(curr in result['gesmes:Envelope'].Cube[0].Cube[0].Cube) {
+                map[result['gesmes:Envelope'].Cube[0].Cube[0].Cube[curr].$.currency] = result['gesmes:Envelope'].Cube[0].Cube[0].Cube[curr].$.rate;
+            }
+            //prints all contents of map
+//            for(k in map) {
+//                app.console.log(k + " " + map[k]);
+//            }
+        });
     })
-  }
-})
+    .catch(function(err) {
+      //handle error
+    })
+});
