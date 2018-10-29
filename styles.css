@@ -7,7 +7,7 @@ html, body, .container-fluid {
   height: 100%;
 }
 
-.usd, .yen, .gbp, .cny {
+.usd, .jpy, .gbp, .cny {
     background-color: whitesmoke;
     color: #403600;
 }
