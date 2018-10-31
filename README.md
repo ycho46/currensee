@@ -1,2 +1,2 @@
 # currensee
-Electron app to see currency based on Naver currency
+Electron app to calculate currency from EUR to USD, JPY, GBP, CNY
